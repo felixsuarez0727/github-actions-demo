@@ -7,7 +7,7 @@ import packageJson from '../../package.json';
 
 test('Renders Version', () => {
   render(<Versioning version={packageJson.version} />)
-  const linkElement = screen.getByText(`Current version: 9.9.9`)
+  const linkElement = screen.getByText(`Current version: ${packageJson.version}`)
   expect(linkElement).toBeInTheDocument()
 })
 
