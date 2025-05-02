@@ -13,6 +13,6 @@ test('Renders Version', () => {
 
 test('Does not render wrong version', () => {
   render(<Versioning version={packageJson.version} />)
-  const wrongText = screen.queryByText('Current version: 9.9.9!')
+  const wrongText = screen.queryByText('Current version: 9.9.9')
   expect(wrongText).not.toBeInTheDocument()
 })
